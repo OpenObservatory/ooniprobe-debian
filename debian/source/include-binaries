@@ -1,0 +1,13 @@
+debian/upstream-signing-key.pgp
+debian/ooni-wui/src/app/fonts/source-code-pro-regular.woff
+debian/ooni-wui/src/app/fonts/ooni-icons.ttf
+debian/ooni-wui/src/app/fonts/charter-regular.woff
+debian/ooni-wui/src/app/fonts/charter-bold-italic.woff
+debian/ooni-wui/src/app/fonts/ooni-icons.eot
+debian/ooni-wui/src/app/fonts/source-code-pro-bold.woff
+debian/ooni-wui/src/app/fonts/charter-italic.woff
+debian/ooni-wui/src/app/fonts/fira-sans-semi-bold.otf
+debian/ooni-wui/src/app/fonts/fira-sans-light.otf
+debian/ooni-wui/src/app/fonts/charter-bold.woff
+debian/ooni-wui/src/app/fonts/ooni-icons.woff
+debian/ooni-wui/src/app/fonts/fira-sans-bold.otf

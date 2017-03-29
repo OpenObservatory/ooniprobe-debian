@@ -1,0 +1,10 @@
+/var/log/ooni/ooniprobe.log,
+/var/log/ooni/oonireport.log {
+	daily
+	missingok
+	rotate 7
+	compress
+	delaycompress
+	copytruncate
+	minsize 100k
+}

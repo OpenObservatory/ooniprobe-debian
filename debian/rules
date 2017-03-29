@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --with=python-virtualenv
+
+override_dh_virtualenv:
+	dh_virtualenv --extra-pip-arg "--no-cache-dir"
+
+override_dh_installchangelogs:
+	dh_installchangelogs ChangeLog.rst
+
+override_dh_installman:
+	dh_installman
+	ln -s ooni.1.gz debian/ooniprobe/usr/share/man/man1/ooniprobe.1.gz

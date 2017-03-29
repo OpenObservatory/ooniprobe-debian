@@ -1,0 +1,56 @@
+#!/bin/sh
+
+set -e
+
+fix_permissions() {
+	local user group mode path
+
+	read user group mode path
+	chown $user:$group $path
+	chmod $mode $path
+}
+
+case "$1" in
+    configure)
+	if ! getent passwd Debian-ooni > /dev/null; then
+		adduser --system --group --quiet --home /var/lib/ooni \
+			--no-create-home --shell /bin/sh \
+			--force-badname Debian-ooni
+	fi
+
+	if ! [ -d /var/lib/ooni ]; then
+		mkdir /var/lib/ooni
+                chown Debian-ooni:Debian-ooni /var/lib/ooni
+	fi
+
+	{ dpkg-statoverride --list /var/lib/ooni ||
+	  echo Debian-ooni Debian-ooni 775 /var/lib/ooni
+	} | fix_permissions
+
+	if ! [ -d /var/lib/ooni/reports ]; then
+		mkdir /var/lib/ooni/reports
+	fi
+
+	{ dpkg-statoverride --list /var/lib/ooni/reports ||
+	  echo Debian-ooni Debian-ooni 775 /var/lib/ooni/reports
+	} | fix_permissions
+
+	if ! [ -d /var/log/ooni ]; then
+		mkdir /var/log/ooni
+                chown Debian-ooni:adm /var/log/ooni
+	fi
+
+	{ dpkg-statoverride --list /var/log/ooni ||
+	  echo Debian-ooni adm 750 /var/log/ooni
+	} | fix_permissions
+
+        [ -f /etc/default/ooniprobe ] && \
+            echo "Removing obsolete /etc/default/ooniprobe..." && \
+            rm -f /etc/default/ooniprobe
+
+	;;
+esac
+
+#DEBHELPER#
+
+exit 0

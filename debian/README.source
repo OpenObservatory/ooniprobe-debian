@@ -1,0 +1,10 @@
+Debian packaging notes for ooniprobe
+====================================
+
+This package uses quilt.
+
+This package is in contrib as currently it is not possible to build the web
+assets using Debian main. nodejs-gulp and nodejs-webpack are required
+dependencies and so for now, those will ship pre-built with the original
+sources found in debian/ooni-wui.
+

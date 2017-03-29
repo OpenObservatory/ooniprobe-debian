@@ -1,0 +1,239 @@
+ooniprobe (2.2.0~rc2-allinone+1) UNRELEASED; urgency=medium
+
+  * Initial conversion to an all in one package installing dependencies in
+    a virtual environment.
+
+ -- Iain R. Learmonth <irl@debian.org>  Wed, 29 Mar 2017 12:45:55 +0100
+
+ooniprobe (2.1.0-4) unstable; urgency=medium
+
+  * Removed old symlink for example configuration (Closes: #849180)
+
+ -- Iain R. Learmonth <irl@debian.org>  Tue, 24 Jan 2017 22:36:43 +0000
+
+ooniprobe (2.1.0-3) unstable; urgency=medium
+
+  * No longer attempts to connect to Internet during build-time tests (Closes:
+    #849590)
+
+ -- Iain R. Learmonth <irl@debian.org>  Tue, 24 Jan 2017 22:01:06 +0000
+
+ooniprobe (2.1.0-2) unstable; urgency=medium
+
+  * Fixes the default paths in settings.ini.
+  * Enables the unit testing as part of the build.
+
+ -- Iain R. Learmonth <irl@debian.org>  Sun, 25 Dec 2016 19:41:54 +0000
+
+ooniprobe (2.1.0-1) unstable; urgency=medium
+
+  * New upstream version 2.1.0
+  * No longer installs /etc/ooniprobe.conf as the installed version breaks the
+    defaults
+
+ -- Iain R. Learmonth <irl@debian.org>  Sun, 11 Dec 2016 23:46:20 +0000
+
+ooniprobe (2.0.2-1) unstable; urgency=medium
+
+  * New upstream version 2.0.2
+  * Removed set -x from postinst (Closes: #844591)
+  * Upgrade removes obsolete cronjob conffiles (Closes: #844590)
+
+ -- Iain R. Learmonth <irl@debian.org>  Wed, 30 Nov 2016 23:11:23 +0000
+
+ooniprobe (2.0.1-2) unstable; urgency=medium
+
+  * debian/ooni-wui:
+   - Imported the sources used in the build of the static web assets.
+
+ -- Iain R. Learmonth <irl@debian.org>  Wed, 16 Nov 2016 13:52:13 +0000
+
+ooniprobe (2.0.1-1) unstable; urgency=medium
+
+  * New upstream version
+  * debian/control:
+   - Moved to contrib/net as the web assets require gulp and webpack to
+     build and these are not available in Debian main at present.
+   - New dependencies on python-klein and python-certifi.
+  * The cron jobs previously responsible for running ooniprobe have been
+    replaced with a systemd service for ooniprobe-agent
+  * All debconf options have been removed (Closes: #837101)
+  * debian/ooniprobe.manpages:
+   - Added new manpage for ooniprobe-agent
+  * debian/patches:
+   - All patches have been replaced. There are now only patches that
+     fix installation issues.
+
+ -- Iain R. Learmonth <irl@debian.org>  Sat, 05 Nov 2016 14:43:06 +0000
+
+ooniprobe (1.6.1-1) unstable; urgency=medium
+
+  * Imported Upstream version 1.6.1
+  * Defuzzed patches
+
+ -- Iain R. Learmonth <irl@debian.org>  Tue, 26 Jul 2016 14:26:17 +0100
+
+ooniprobe (1.5.1-2) unstable; urgency=medium
+
+  * Swedish translation for debconf option added (Closes: #822306)
+  * Confusing output from oonideckgen in postinst is suppressed (Closes:
+    #827359)
+
+ -- Iain R. Learmonth <irl@debian.org>  Sun, 19 Jun 2016 11:39:03 +0100
+
+ooniprobe (1.5.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/patches:
+    - Removed patch for disabling tests requiring network access as this
+      is now fixed upstream.
+
+ -- Iain R. Learmonth <irl@debian.org>  Sun, 05 Jun 2016 17:55:35 +0100
+
+ooniprobe (1.4.2-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/control:
+   - Updated Standards-Version to 3.9.8
+   - Removed unnecessary versioned dependencies
+   - Updated Vcs-* links to use secure URIs
+   - Adopted by the Internet Measurement Packaging Team
+   - Updated my email address
+  * Refreshed patches:
+   - 0001-Use-system-GeoIP-files.patch
+   - 0003-Add-missing-manual-hyphenation-to-fix-manpage-error.patch
+   - 0004-Exclude-manpage-from-data_files.patch
+   - 0005-Remove-uneeded-dependency-from-requirements.txt.patch
+   - 0006-Remove-tests-requiring-non-free-GeoIP-database.patch
+   - 0009-Fix-install-run.patch
+  * Removed attempts to run tests that require network access
+
+ -- Iain R. Learmonth <irl@debian.org>  Wed, 18 May 2016 13:00:25 +0100
+
+ooniprobe (1.3.2-2) unstable; urgency=medium
+
+  * debian/control:
+   - Change Build-Depends on python-txtorcon (from >=0.7 to >=0.14.2)
+  * debian/rules:
+   - Re-enable tests
+
+ -- Iain R. Learmonth <irl@debian.org>  Sun, 27 Dec 2015 19:27:19 +0000
+
+ooniprobe (1.3.2-1) unstable; urgency=medium
+
+  [ Jérémy Bobbio ]
+  * Retrofit a missing changelog entry
+
+  [ Iain R. Learmonth ]
+  * Imported Upstream version 1.3.2
+  * Updating gbp configuration to new format
+  * debian/watch:
+   - Using the PyPI redirector instead of using PyPI directly
+  * debian/upstream-signing-key.pgp
+   - New key is used for signing, old key expired
+   - 702287F4 -> 150FE210
+  * Refreshed patches:
+   - 0001-Use-system-GeoIP-files.patch
+   - 0004-Exclude-manpage-from-data_files.patch
+   - 0005-Remove-uneeded-dependency-from-requirements.txt.patch
+   - 0009-Fix-install-run.patch
+  * debian/rules:
+   - Temporarily disable testing while the tests are broken.
+
+ -- Iain R. Learmonth <irl@debian.org>  Sun, 27 Dec 2015 11:49:39 +0000
+
+ooniprobe (1.3.1-2) unstable; urgency=medium
+
+  [ Christian Perrier ]
+  * Debconf templates and debian/control reviewed by the debian-l10n-
+    english team as part of the Smith review project. (Closes: #784241)
+    Also, thanks Justin B Rye!
+
+  [Debconf translation updates]
+  * Czech (Michal Simunek). (Closes: #787492)
+  * Brazilian Portuguese (Adriano Rafael Gomes). (Closes: #788341)
+  * German (Chris Leick). (Closes: #788495)
+  * Russian (Yuri Kozlov). (Closes: #788510)
+  * Spanish; (Jonathan Bustillos). (Closes: #788787)
+  * Portuguese (Américo Monteiro). (Closes: #788775)
+  * French (Étienne Gilli). (Closes: #788925)
+  * Danish (Joe Hansen). (Closes: #788995)
+
+  [ Jérémy Bobbio ]
+  * Stop failing on purge when /var/lib/ooni doesn't exist and
+    add removal of /var/log/ooni. Thanks Iain R. Learmonth for
+    the patch! (Closes: #784254)
+  * Fix watch file to use PyPI's Simple API. Thanks lintian!
+
+ -- Jérémy Bobbio <lunar@debian.org>  Wed, 01 Jul 2015 13:51:47 +0200
+
+ooniprobe (1.3.1-1) unstable; urgency=low
+
+  [ Jérémy Bobbio ]
+  * New upstream version. (Closes: #766061, #779432)
+  * Refresh patches.
+  * Add optional system-wide cronjobs to run ooniprobe daily
+    and ooniresources monthly.
+  * Add python-pypcap to Recommends.
+  * Add adduser to Depends (used by postinst and postrm scripts).
+  * Bump debhelper version to 9.
+
+  [ Iain R. Learmonth ]
+  * Use canonical URL for Vcs-Git.
+  * Added myself to Uploaders.
+  * Document the risks that may be encountered when running ooniprobe.
+
+ -- Jérémy Bobbio <lunar@debian.org>  Sat, 02 May 2015 00:10:15 +0200
+
+ooniprobe (1.2.2-1) unstable; urgency=medium
+
+  * New upstream version:
+    - Ship ooni.deckgen.processors module. (Closes: #764550)
+  * Remove obsolete patch.
+
+ -- Jérémy Bobbio <lunar@debian.org>  Sat, 18 Oct 2014 12:01:34 +0200
+
+ooniprobe (1.2.0-1) unstable; urgency=medium
+
+  * New upstream version:
+    - Randomly pick the socks and control port in test_settings.
+      (Closes: #763264)
+  * Refresh patches.
+  * Ship upstream README.rst.
+  * Ship the new manpages.
+  * Ship upstream changelog.
+  * Bump Standards-Version, no changes required.
+
+ -- Jérémy Bobbio <lunar@debian.org>  Fri, 03 Oct 2014 10:50:28 +0200
+
+ooniprobe (1.1.1-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Fix typo in package Recommends. (Closes: #750688)
+  * Update manpage locations.
+  * Refresh patches.
+  * Add a patch to remove the uneeded requirement on service-identity.
+  * Add a patch to remove tests requiring non-free GeoIP databases.
+
+ -- Jérémy Bobbio <lunar@debian.org>  Tue, 02 Sep 2014 02:23:05 +0000
+
+ooniprobe (1.0.2-1) unstable; urgency=low
+
+  * New upstream version. (Closes: #743108)
+  * Update Build-Depends from requirements.txt.
+  * Add tor to Build-Depends as required by new tests.
+  * Ship upstream manpage. (Closes: #742936)
+  * Add python-dumpnet to Recommends. (Closes: #742937)
+  * Drop obsolete patches.
+  * Allow tests to run without ooniprobe being installed.
+  * Add a patch to fix an unbreakable line in manpage.
+  * Fix a typo in README.source.
+  * Add a patch to exclude manpage from files in /usr/share/ooni.
+
+ -- Jérémy Bobbio <lunar@debian.org>  Sun, 11 May 2014 13:24:20 +0200
+
+ooniprobe (1.0.1-1) unstable; urgency=low
+
+  * Initial release. (Closes: #739609)
+
+ -- Jérémy Bobbio <lunar@debian.org>  Mon, 24 Mar 2014 17:03:01 +0100

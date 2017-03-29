@@ -1,0 +1,24 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+    purge)
+	if [ -d /var/lib/ooni ]; then
+		rm -rf /var/lib/ooni/.ooni
+		rm -rf /var/lib/ooni/decks
+		rm -rf /var/lib/ooni/inputs
+		rm -rf /var/lib/ooni/resources
+		rm -rf /var/lib/ooni/reports
+		rm -rf /var/lib/ooni/GeoIP
+		rmdir --ignore-fail-on-non-empty /var/lib/ooni
+	fi
+	if [ -d /var/log/ooni ]; then
+		rmdir --ignore-fail-on-non-empty /var/log/ooni
+	fi
+	;;
+esac
+
+#DEBHELPER#
+
+exit 0

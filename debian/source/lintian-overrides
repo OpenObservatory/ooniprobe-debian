@@ -1,0 +1,6 @@
+# Sources for this file are found in debian/ooni-wui/ (Bug #842793)
+ooniprobe source: insane-line-length-in-source-file debian/ooni-wui/fixtures/measurement.js *
+# Sources for this file are found in debian/ooni-wui/ (Bug #842793)
+ooniprobe source: source-contains-prebuilt-javascript-object debian/ooni-wui/fixtures/measurement.js *
+# Sources for this file are found in debian/ooni-wui/ (Bug #842793)
+ooniprobe source: source-is-missing debian/ooni-wui/fixtures/measurement.js *

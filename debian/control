@@ -1,0 +1,43 @@
+Source: ooniprobe
+Maintainer: Open Observatory of Network Interference <ooni-dev@lists.torproject.org>
+Uploaders: Iain R. Learmonth <irl@torproject.org>
+Section: net
+Priority: extra
+Build-Depends: debhelper (>= 9),
+               dh-python,
+               dh-systemd,
+               dh-virtualenv,
+               python-all,
+               python-dev,
+               python-sphinx,
+               python-setuptools,
+               libgeoip-dev,
+               libffi-dev,
+               libpcap-dev,
+               libssl-dev,
+               libdumbnet-dev,
+               tor
+Standards-Version: 3.9.8
+Vcs-Browser: https://github.com/TheTorProject/ooniprobe-debian.git
+Vcs-Git: https://github.com/TheTorProject/ooniprobe-debian.git
+Homepage: https://ooni.torproject.org/
+X-Python-Version: >= 2.7
+
+Package: ooniprobe
+Architecture: any
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends},
+         ${python:Depends},
+         adduser,
+         tor,
+         geoip-database
+Suggests: obfsproxy
+Description: probe for the Open Observatory of Network Interference (OONI)
+ OONI, the Open Observatory of Network Interference, is a global observation
+ network which aims to collect high quality data using open methodologies
+ and free software to share observations and data about the various types,
+ methods, and amounts of network tampering in the world.
+ .
+ ooniprobe is a program to probe a network and collect data for the OONI
+ project. It will test the current network for signs of surveillance and
+ censorship.

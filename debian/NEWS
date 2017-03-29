@@ -1,0 +1,25 @@
+ooniprobe (2.0.1-1) unstable; urgency=medium
+
+  Starting from ooniprobe 2.0.0, there is now a new agent daemon
+  (ooniprobe-agent) that is responsible for performing the regular measurements
+  and updating ooniprobe's resources in place of the old cron jobs. The cron
+  jobs will be removed as part of this upgrade along with the now defunct
+  /etc/default/ooniprobe file that stored the cronjob settings.
+ 
+  If you had previously chosen to run measurements daily, these will no longer
+  be run and you must now visit the ooniprobe-agent web frontend to configure
+  running daily measurements. This is also necessary to provide informed consent
+  for the measurements to be run.
+ 
+  You'll find the web frontend at:
+ 
+    http://127.0.0.1:8842/
+
+  You can also configure ooniprobe from the command-line by running:
+
+    sudo -u Debian-ooni ooniprobe --initialize
+ 
+  If you do not configure ooniprobe via the web interface or command line, no
+  measurements will be run.
+
+ -- Iain R. Learmonth <irl@debian.org>  Tue, 01 Nov 2016 17:10:53 +0000
