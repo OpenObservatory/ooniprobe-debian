@@ -1,0 +1,34 @@
+Description: <short summary of the patch>
+ TODO: Put a short summary on the line above and replace this paragraph
+ with a longer explanation of this change. Complete the meta-information
+ with other relevant fields (see below for details). To make it easier, the
+ information below has been extracted from the changelog. Adjust it or drop
+ it.
+ .
+ ooniprobe (2.2.0~rc2-allinone+1) UNRELEASED; urgency=medium
+ .
+   * Initial conversion to an all in one package installing dependencies in
+     a virtual environment.
+Author: Iain R. Learmonth <irl@debian.org>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: https://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: 2017-03-29
+
+--- ooniprobe-2.2.0~rc2.orig/requirements.txt
++++ ooniprobe-2.2.0~rc2/requirements.txt
+@@ -1,3 +1,5 @@
++pip>=9.0.1
++
+ # These are dependencies of ooniprobe depedencies that require specific
+ # versions.
+ pyasn1>=0.1.8
