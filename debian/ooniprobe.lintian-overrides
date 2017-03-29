@@ -4,3 +4,5 @@ read-in-maintainer-script
 init.d-script-not-marked-as-conffile etc/init.d/ooniprobe
 # this is appropriately guarded for in the maintainer scripts (see: #822669)
 init.d-script-not-included-in-package etc/init.d/ooniprobe
+# these are deliberately here
+dir-or-file-in-opt opt/venvs/ooniprobe*
