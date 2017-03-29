@@ -5,9 +5,9 @@ Documentation=man:ooniprobe(1) https://ooni.torproject.org/
 [Service]
 User=Debian-ooni
 Type=forking
-ExecStart=/usr/bin/ooniprobe-agent start
-ExecStop=/usr/bin/ooniprobe-agent stop
-PIDFile=/var/lib/ooni/twistd.pid
+ExecStart=/opt/venvs/ooniprobe/bin/ooniprobe-agent start
+ExecStop=/opt/venvs/ooniprobe/bin/ooniprobe-agent stop
+PIDFile=/opt/venvs/ooniprobe/var/lib/ooni/twistd.pid
 
 [Install]
 WantedBy=multi-user.target
