@@ -1,0 +1,7 @@
+[console_scripts]
+oonideckgen = ooni.scripts.oonideckgen:run
+ooniprobe = ooni.scripts.ooniprobe:run
+ooniprobe-agent = ooni.scripts.ooniprobe_agent:run
+oonireport = ooni.scripts.oonireport:run
+ooniresources = ooni.scripts.ooniresources:run
+

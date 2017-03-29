@@ -1,0 +1,16 @@
+pyasn1>=0.1.8
+setuptools>=11.3
+PyYAML>=3.10
+Twisted>=13.2.0
+ipaddr>=2.1.10
+pyOpenSSL>=0.15.1
+geoip
+txtorcon>=0.7
+txsocksx>=0.0.2
+scapy>=2.2.0
+pypcap>=1.1
+service-identity
+pydumbnet
+zope.interface
+certifi
+klein
