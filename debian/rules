@@ -5,9 +5,7 @@
 
 override_dh_virtualenv:
 	dh_virtualenv \
-		--preinstall "pip>=9.0.1" \
-		--extra-pip-arg "--no-cache-dir" \
-		--extra-pip-arg "--no-binary=:all:"
+		--preinstall "pip>=9.0.1"
 
 override_dh_installchangelogs:
 	dh_installchangelogs ChangeLog.rst
