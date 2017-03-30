@@ -1,0 +1,5 @@
+/opt/venvs/ooniprobe/bin/ooniprobe /usr/bin
+/opt/venvs/ooniprobe/bin/oonideckgen /usr/bin
+/opt/venvs/ooniprobe/bin/ooniprobe-agent /usr/bin
+/opt/venvs/ooniprobe/bin/oonireport /usr/bin
+/opt/venvs/ooniprobe/bin/ooniresources /usr/bin
