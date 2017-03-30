@@ -7,6 +7,7 @@ User=Debian-ooni
 Type=forking
 ExecStart=/usr/bin/ooniprobe-agent start
 ExecStop=/usr/bin/ooniprobe-agent stop
+PIDFile=/var/lib/ooni/twistd.pid
 
 [Install]
 WantedBy=multi-user.target
