@@ -1,3 +1,12 @@
+ooniprobe (2.2.0-allinone+1~tpo8+2) jessie-backport; urgency=medium
+
+  * Rebuild for jessie. (for deb.torproject.org)
+  * Fixes paths by building with dh-virtualenv from jessie-backports.
+   - Installation paths changed >1.0 but not accounted for in the .links
+     file.
+
+ -- Iain R. Learmonth <irl@debian.org>  Tue, 11 Apr 2017 11:46:15 +0100
+
 ooniprobe (2.2.0-allinone+1~tpo8+1) jessie-backport; urgency=medium
 
   * Rebuild for jessie. (for deb.torproject.org)
