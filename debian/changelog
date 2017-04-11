@@ -1,9 +1,10 @@
-ooniprobe (2.2.0~rc2-allinone+1) UNRELEASED; urgency=medium
+ooniprobe (2.2.0-allinone+1) unstable; urgency=medium
 
+  * New upstream version.
   * Initial conversion to an all in one package installing dependencies in
-    a virtual environment.
+    a virtual environment for deb.torproject.org.
 
- -- Iain R. Learmonth <irl@debian.org>  Wed, 29 Mar 2017 12:45:55 +0100
+ -- Iain R. Learmonth <irl@debian.org>  Tue, 11 Apr 2017 10:32:18 +0100
 
 ooniprobe (2.1.0-4) unstable; urgency=medium
 
