@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: ooniprobe
-Version: 2.2.0rc2
+Version: 2.2.0
 Summary: Network measurement tool foridentifying traffic manipulation and blocking.
 Home-page: https://ooni.torproject.org/
 Author: Open Observatory of Network Interference
