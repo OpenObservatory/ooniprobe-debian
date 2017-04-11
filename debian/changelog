@@ -1,3 +1,9 @@
+ooniprobe (2.2.0-allinone+1~ubuntu16.10+1) yakkety-backport; urgency=medium
+
+  * Rebuild for Ubuntu 16.10. (for deb.torproject.org)
+
+ -- Iain R. Learmonth <irl@debian.org>  Tue, 11 Apr 2017 12:53:24 +0100
+
 ooniprobe (2.2.0-allinone+1) unstable; urgency=medium
 
   * New upstream version.
