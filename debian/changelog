@@ -1,3 +1,9 @@
+ooniprobe (2.2.0-allinone+1~tpo8+1) jessie-backport; urgency=medium
+
+  * Rebuild for jessie. (for deb.torproject.org)
+
+ -- Iain R. Learmonth <irl@debian.org>  Tue, 11 Apr 2017 11:46:15 +0100
+
 ooniprobe (2.2.0-allinone+1) unstable; urgency=medium
 
   * New upstream version.
