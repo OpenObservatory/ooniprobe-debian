@@ -1,3 +1,9 @@
+ooniprobe (2.2.0-allinone+1~tpo9+1) stretch-backport; urgency=medium
+
+  * Rebuild for stretch. (for deb.torproject.org)
+
+ -- Iain R. Learmonth <irl@debian.org>  Tue, 11 Apr 2017 11:12:00 +0100
+
 ooniprobe (2.2.0-allinone+1) unstable; urgency=medium
 
   * New upstream version.
